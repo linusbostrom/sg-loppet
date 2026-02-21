@@ -1,0 +1,238 @@
+html {
+	font-size: 72%;
+}
+
+h1, h2, h3, h4, p, table, ul, .button, figcaption {
+	 font-family: "Comic Neue";
+}
+
+
+h1, h2, h3, h4 {
+	
+	 font-weight: 900;
+}
+
+
+.row {
+	margin-top: 2rem;
+}
+
+    .svg-container {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .svg-container img {
+        width: 100%; /* Set the width to 100% */
+        height: 100%; /* Allow the height to adjust automatically */
+        max-width: 100%;
+        max-height: calc(100vh - 100px); /* Adjust to accommodate text area */
+    }
+
+.slide-image {
+	position: relative;
+}
+
+
+
+/* Overlay-stilen */
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 4px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .close-btn:hover {
+      color: #aaa;
+    }
+
+    /* Bara för att lägga lite avstånd */
+    .container {
+      margin-top: 50px;
+    }
+
+    .centered-img {
+  display: block;
+  margin: 0 auto;
+/*  width: 60%; /* eller px, t.ex. 300px */*/
+}
+
+.button.button-primary {
+
+		height: auto;
+}
+
+/* Callout Styles */
+.callout {
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #eee; /* Lätt grå kant som standard */
+  background-color: #f9f9f9; /* Lätt grå bakgrund */
+  border-radius: 4px;
+}
+
+.callout h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.8rem; /* Anpassa storlek för att vara i linje med Skeleton */
+  color: #333;
+}
+
+.callout p {
+  margin-bottom: 5px;
+  line-height: 1.6; /* Förbättra läsbarheten */
+}
+
+/* Callout Warning - Specifik stil för inställt event */
+.callout-warning {
+  border-color: #ff9800; /* Orange kant för varning */
+  background-color: #fff3e0; /* Lätt orange bakgrund */
+  color: #e65100; /* Mörkare orange textfärg */
+}
+
+.callout-warning h4 {
+  color: #e65100; /* Mörkare orange rubrik */
+}
+
+
+
+/* ===== Figur & bild =================================================== */
+.figure-with-caption {
+  /* Skeleton lägger ~2 rem ovan/under på paragrafen – vi kopierar det */
+  margin: 2rem 0;
+  text-align: center;           /* centrera text + bild  */
+}
+
+.figure-with-caption img {
+  display: block;               /* tar bort inline-gap */
+  margin: 0;                    /* nollställer ev. nedre marginal */
+  border: 1px solid #eee;       /* tunn ram som matchar caption */
+  border-bottom: none;          /* undvik dubbelram */
+  border-radius: 4px 4px 0 0;   /* samma radie som Skeletons knappar */
+}
+
+/* ===== Bildtext ======================================================= */
+.figure-caption {
+  display: block;
+  padding: 0.75rem 1.5rem;        /* luft runt texten */
+  text-align: left;
+  line-height: 1.4;
+  color: #666;                  /* lite ljusare än Skeletons standard (#333) */
+
+  background: #f7f7f7;          /* diskret bakgrund – justera vid behov      */
+  border: 1px solid #eee;       /* tunn, ljus ram */
+  border-top: none;             /* smälter ihop med bildens ram              */
+  border-radius: 0 0 4px 4px;   /* rundade hörn nertill                      */
+}
+
+
+
+/* Responsivitet - Anpassa för mindre skärmar */
+@media (max-width: 550px) {
+  .callout {
+    padding: 10px 15px;
+  }
+
+  .callout h4 {
+    font-size: 1.6rem;
+  }
+}
+
+body {
+  padding-top: 2rem;
+   line-height: 1.6;
+   background-color: #faf9f7;
+
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.lead {
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+}
+
+h2 {
+  margin-top: 3rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid #000;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.9rem;
+}
+
+li::before {
+  content: "• ";
+  font-weight: bold;
+}
+
+.header-block {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-block h1 {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+}
+
+.header-block .lead {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.8rem;
+  opacity: 0.75;
+  margin-bottom: 2.5rem;
+}
+
+.jubilee {
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #a32020;
+  color: white;
+  border-radius: 50px;
+  box-shadow: 0 3px 0 #000;
+}
