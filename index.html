@@ -24,6 +24,8 @@ window.addEventListener("load", function() {
             .classList.add("visible");
     });
 });
+
+
 </script>
 
 </head>
@@ -32,7 +34,7 @@ window.addEventListener("load", function() {
 
 	<div class="jubilee-banner">
     <div class="jubilee-banner-inner">
-        🎉 Södra Gatan-loppet 50 år • 1974–2026
+        🎉 Södra Gatan-loppet 50 år <br /> 1974–2026
     </div>
 </div>
 
@@ -59,12 +61,13 @@ window.addEventListener("load", function() {
 		<div class="eight columns">
 
 			<div class="header-block">
+				<img src="images/sg-logotyp.png" alt="" class="section-divider">
 			  <h1>Södra Gatan-loppet 2026</h1>
-			  <p class="lead">Onsdag 1 april — Ett motionslopp för hela familjen</p>
+			  <p class="lead">Välkommen att åka det 50-årsjubilerande motionsloppet på skidor i Arvidsjaur</p>
+			  <p class="alert alert-black">Onsdag 1 april 2026</p>
 			  <!-- <h2 class="jubilee">50-årsjubileum</h2> -->
 			</div>
 			
-
 			<ul>
 				<li>Start & mål: Rymmarstadion</li>
 				<li>Första start kl. 18.00</li>
@@ -78,30 +81,80 @@ window.addEventListener("load", function() {
 				<li>Startafgift: 50 kr barn upp till 18 år, 100 kr vuxna. Swish eller kontant</li>
 			</ul>
 		
+		<p class="alert alert-black">OBS! Anmälan senast måndag 30 mars, ring eller sms:a till Lennart Jonsson, 070-598 83 05.</p>
+
+		<img src="images/sg-logotyp.png" alt="" class="section-divider">
+
+		<!-- Resultat arkiv -->
+		<section id="arkiv">
+		  <h2>Resultat genom tiderna</h2>
+
+		  <details open>
+		    <summary>2020–2025</summary>
+		    <ul class="result-list">
+		      <li><a href="resultat/resultat_sg-loppet_2025.pdf">2025 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2024.pdf">2024 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2023.pdf">2023 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2022.pdf">2022 – Resultat (PDF)</a></li>
+		    </ul>
+		  </details>
+
+		  <details>
+		    <summary>2010–2019</summary>
+		    <ul class="result-list">
+		      <li><a href="resultat/resultat_sg-loppet_2019.pdf">2019 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2018.pdf">2018 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2017.pdf">2017 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2016.pdf">2016 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2015.pdf">2015 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2014.pdf">2014 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2013.pdf">2013 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2012.pdf">2012 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2011.pdf">2011 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2010.pdf">2010 – Resultat (PDF)</a></li>
+		    </ul>
+		  </details>
+
+		  <details>
+		    <summary>2000–2009</summary>
+		    <ul class="result-list">
+		      <li><a href="resultat/resultat_sg-loppet_2009.pdf">2009 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2008.pdf">2008 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2007.pdf">2007 – Resultat (PDF)</a></li>
+		      <li><a href="resultat/resultat_sg-loppet_2006.pdf">2006 – Resultat (PDF)</a></li>
+		    </ul>
+		  </details>
+
+		</section>
 
 
-		<!-- <a href="sgloppet_resultatlista_2025.pdf" class="button button-primary">Resultatlista, Södra Gatan-loppet 2025 </a>
 
-		<br />
-		<br /> -->
-<!-- 		<a class="button" href="sg-loppet-2025-6-i-topp.pdf">Topp 6-placeringar 1974–2024 (PDF)</a>
-		<a class="button" href="sg-loppet-2025-aringar.pdf">Flest lopp 1974–2024 (PDF)</a>
-		<a class="button" href="SG_PM_2025.pdf">PM med information om loppet (PDF)</a> -->
-		
+
 		</div>
 		<div class="two columns"></div>
 	</div>
 
 	
-	<div class="row">
-		  <div class="twelve columns">
-		    <img src="affisch-sg-2026.png" class="u-max-full-width" alt="Södra Gatanloppet 2026, inbjudan">
-		  </div>
-	</div>		
 	
 
 
 </div>
+
+
+<script>
+document.querySelectorAll("#arkiv details").forEach((detail) => {
+  detail.addEventListener("toggle", function() {
+    if (this.open) {
+      document.querySelectorAll("#arkiv details").forEach((other) => {
+        if (other !== this) {
+          other.removeAttribute("open");
+        }
+      });
+    }
+  });
+});
+</script>
+</body>
 
 </body>
 </html>

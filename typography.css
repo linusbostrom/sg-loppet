@@ -2,7 +2,7 @@ html {
 	font-size: 72%;
 }
 
-h1, h2, h3, h4, p, table, ul, .button, figcaption {
+h1, h2, h3, h4, p, table, ul, .button, figcaption, summary {
 	 font-family: "Comic Neue";
 }
 
@@ -174,6 +174,10 @@ ul {
   line-height: 1.6;
 }
 
+ul.li {
+  margin-bottom: 0.5rem;
+}
+
 .lead {
   font-size: 1.8rem;
   font-weight: 400;
@@ -210,7 +214,7 @@ li::before {
 
 .header-block {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .header-block h1 {
@@ -285,4 +289,93 @@ li::before {
 @keyframes shimmer {
     from { left: -150%; }
     to   { left: 150%; }
+}
+
+.section-divider {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.results::before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 60px auto;
+    background: url("/images/sg-logotyp.png") no-repeat center;
+    background-size: contain;
+    opacity: 0.6;
+}
+
+
+/* Resultat-arkiv  */
+
+#arkiv {
+    /*margin-top: 5rem;*/
+    margin-bottom: 5rem;
+}
+
+#arkiv h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+details {
+    padding: 1.2rem 0;
+}
+
+details + details {
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+details > ul {
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+details[open] > ul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.6rem;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "›";
+    font-size: 2.3rem;
+    float: right;
+    transition: transform 0.5s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(90deg);
+}
+
+.result-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.result-list li {
+    margin-bottom: 0.6rem;
+}
+
+.result-list a {
+    text-decoration: none;
+}
+
+.result-list a:hover {
+    text-decoration: underline;
 }
