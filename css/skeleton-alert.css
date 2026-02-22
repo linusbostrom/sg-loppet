@@ -28,3 +28,12 @@
     border-left-color: #C0392B;
     color: #C0392B;
 }
+
+.alert-black {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+}
