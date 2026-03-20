@@ -366,6 +366,7 @@ details[open] summary::after {
     list-style: none;
     padding-left: 0;
     margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .result-list li {
