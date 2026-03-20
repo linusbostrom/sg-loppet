@@ -379,3 +379,113 @@ details[open] summary::after {
 .result-list a:hover {
     text-decoration: underline;
 }
+
+.date-badge{
+    padding: .6rem 1rem;   /* var troligen större */
+  margin: 1rem 0 1rem;
+  font-size: 1.1rem;
+  border-radius: .6rem; /* gör den lite snällare */
+  color: #fff;
+  background-color: #000;
+}
+
+/* Resultatknapp */
+/* Bas: känns som en länk i din design, men tydligare */
+.resultat-cta{
+
+  display: inline-flex;
+  align-items: center;
+  gap: .9rem;
+  padding: 1rem 3rem;
+  border-radius: .6rem;
+  border: 2px solid currentColor;
+  color: #1EAEDB;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  background: rgba(30, 174, 219, 0.08); /* diskret “snöglans” */
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+}
+
+.resultat-cta:hover{
+  transform: translateY(-1px);
+  background: rgba(30, 174, 219, 0.12);
+  box-shadow: 0 10px 22px rgba(30, 174, 219, 0.18);
+}
+
+.resultat-cta:active{
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(30, 174, 219, 0.14);
+}
+
+.resultat-cta:focus-visible{
+  outline: 3px solid rgba(30, 174, 219, 0.45);
+  outline-offset: 3px;
+}
+
+/* “Puls” som signalerar NU – men fortfarande samma färgspråk */
+.resultat-cta.is-live{
+  position: relative;
+}
+
+.resultat-cta.is-live::before{
+  content: "";
+  width: .55rem;
+  height: .55rem;
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow: 0 0 0 0 rgba(30, 174, 219, 0.55);
+  animation: sg-pulse 1.6s ease-out infinite;
+}
+
+/* Pulserande ring */
+@keyframes sg-pulse{
+  0%   { box-shadow: 0 0 0 0 rgba(30, 174, 219, 0.55); }
+  70%  { box-shadow: 0 0 0 .7rem rgba(30, 174, 219, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(30, 174, 219, 0); }
+}
+
+/* Respektera användare som vill slippa animation */
+@media (prefers-reduced-motion: reduce){
+  .resultat-cta.is-live::before{ animation: none; }
+  .resultat-cta{ transition: none; }
+}
+
+/* Resultatlista */
+#arkiv {
+  margin-top: 2rem;
+}
+
+#arkiv h2 {
+  margin-bottom: 1rem;
+}
+
+#arkiv details {
+  margin-bottom: 0.5rem;
+}
+
+#arkiv summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.2rem 0;
+}
+
+
+
+.result-list li {
+  padding: 0.2rem 0;
+}
+
+.result-list a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.result-list a:hover {
+  text-decoration: underline;
+}
+
+.result-list li.no-race {
+  color: #666;
+  font-style: italic;
+}
