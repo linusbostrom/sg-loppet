@@ -199,17 +199,12 @@ h2 {
 }
 
 ul {
-  list-style: none;
-  padding-left: 0;
+  list-style: disc outside;
+  padding-left: 2rem;
 }
 
 li {
   margin-bottom: 0.9rem;
-}
-
-li::before {
-  content: "• ";
-  font-weight: bold;
 }
 
 .header-block {
@@ -317,7 +312,6 @@ li::before {
 }
 
 #arkiv h2 {
-    text-align: center;
     margin-bottom: 2rem;
 }
 
@@ -362,11 +356,15 @@ details[open] summary::after {
     transform: rotate(90deg);
 }
 
+
+
 .result-list {
-    list-style: none;
+    list-style-type: disc;
+    list-style-position: outside;
     padding-left: 0;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 2rem;
 }
 
 .result-list li {
@@ -478,7 +476,6 @@ details[open] summary::after {
 }
 
 .result-list a {
-  display: inline-block;
   text-decoration: none;
 }
 
